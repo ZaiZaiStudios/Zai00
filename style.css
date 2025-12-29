@@ -1,0 +1,144 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+  background: #020; /* extreme dark green */
+  color: #9fd3a8;   /* matcha green */
+  font-family: "Arial Narrow", Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+/* ===== DOT-MATRIX (ORIGINAL FORMAT PRESERVED) ===== */
+.dot-matrix {
+  position: relative;
+  width: 100vw;
+  height: 30px;
+  background: rgb(0, 14, 0);
+  overflow: hidden;
+  border: rgb(2, 46, 15) 1px solid;
+}
+
+.marquee {
+  position: absolute;
+  white-space: nowrap;
+  animation: slide 15s linear infinite;
+}
+
+.marquee span {
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: #92dfab;
+  text-shadow:
+    1px 0 currentColor,
+    -1px 0 currentColor,
+    0 1px currentColor,
+    0 -1px currentColor;
+  filter: blur(0.6px);
+}
+
+@keyframes slide {
+  from { transform: translateX(100vw); }
+  to   { transform: translateX(-100%); }
+}
+
+/* ===== NAV ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-text {
+  max-width: 480px;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.about img {
+  width: 260px;
+  border: 1px solid #1f5;
+  image-rendering: pixelated;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.7;
+  border-top: 1px solid #063;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+nav {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  border: green 2px solid;
+}
+li {
+  margin-top: 0px;
+  flex-direction: column;
+  margin-bottom: -20px;
+  text-decoration: none;
+  padding: 20px;
+}
+a {
+  color: #9fd3a8;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+a:hover {
+  text-decoration: underline;
+}
+#coolmode {
+    font-size: 8px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
