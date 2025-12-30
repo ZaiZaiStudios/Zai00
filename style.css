@@ -42,7 +42,7 @@ header h1 {
 .marquee {
   position: absolute;
   white-space: nowrap;
-  animation: slide 15s linear infinite;
+  animation: slide 25s linear infinite;
 }
 
 .marquee span {
@@ -141,4 +141,5 @@ a:hover {
 #coolmode {
     font-size: 8px;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
+
 }
