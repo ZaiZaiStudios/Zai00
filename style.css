@@ -42,7 +42,7 @@ header h1 {
 .marquee {
   position: absolute;
   white-space: nowrap;
-  animation: slide 25s linear infinite;
+  animation: slide 32s linear infinite;
 }
 
 .marquee span {
@@ -143,3 +143,4 @@ a:hover {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 
 }
+
