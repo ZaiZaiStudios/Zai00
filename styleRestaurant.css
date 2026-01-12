@@ -1,0 +1,435 @@
+/* ================= MENUKAART CAROUSEL SECTION ================= */
+.menukaart-carousel-section {
+  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  scroll-snap-align: start;
+  padding-top: 60px;
+  background: #000;
+}
+.menukaart-carousel-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffb000;
+}
+.menukaart-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.carousel-img {
+  width: calc(100vw + 50px);
+  max-width: 750px;
+  max-height: calc(70vh + 50px);
+  height: calc(60vh + 50px);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  cursor: pointer;
+  object-fit: contain;
+  background: transparent;
+  transition: box-shadow 0.2s;
+}
+.carousel-img:focus {
+  outline: 2px solid #ffb000;
+}
+.carousel-btn {
+  background: #111;
+  color: #ffb000;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+
+}
+.carousel-btn:hover {
+  background: #222;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .menukaart-carousel {
+    max-width: 100vw;
+    gap: 0;
+  }
+  .carousel-img {
+    width: calc(98vw + 50px);
+    max-width: calc(98vw + 50px);
+    max-height: calc(45vh + 50px);
+    height: calc(38vh + 50px);
+  }
+}
+/* ================= CONTACT SECTION ================= */
+.contact-section {
+  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  scroll-snap-align: start;
+  padding-top: 60px;
+  background: #000;
+}
+.contact-section h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ffb000;
+}
+.contact-info-p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  justify-content: center;
+}
+
+/* ================= CONTACT INFO ================= */
+.contact-info {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.contact-icon {
+  width: 1.3em;
+  height: 1.3em;
+  display: inline-block;
+  vertical-align: middle;
+  filter: brightness(1.2) drop-shadow(0 0 2px #ffb00044);
+}
+.contact-label {
+  vertical-align: middle;
+}
+/* ================= MENU POPUP MODAL ================= */
+.menu-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.menu-popup-content {
+  background: #111;
+  border-radius: 16px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  max-width: 400px;
+  width: 90vw;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #ffb000;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-images-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  width: 100%;
+  max-height: 60vh;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.menu-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+/* ================= FADE-IN ANIMATION ================= */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: #000;
+  color: #fff;
+  overflow: hidden; /* main scroll is controlled by main */
+}
+
+/* ================= HEADER ================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-bottom: 1px solid #111;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* ================= MAIN SCROLL ================= */
+main {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= HERO / PARALLAX ================= */
+.achtergrond-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Make the logo in the hero section smaller */
+.voor-content .DSlogo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.achtergrond-bg {
+  position: absolute;
+  inset: -10%;
+  background-image: url("Foto1.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  opacity: 0.3; 
+}
+
+.voor-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.voor-content h2 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: #ffb000;
+  text-shadow: 0 0 8px rgba(255, 176, 0, 0.6);
+  animation: glow 3s ease-in-out infinite;
+}
+
+.voor-content p {
+  font-size: 1.1rem;
+  color: #fff5cc;
+  text-shadow: 0 0 4px rgba(255, 255, 200, 0.4);
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 6px rgba(255, 176, 0, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(255, 176, 0, 0.9);
+  }
+}
+
+/* ================= DISHES ================= */
+.dishes {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #000;
+}
+
+.dishes h3 {
+  font-size: 1.8rem;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.dish-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.dish-track::-webkit-scrollbar {
+  display: none;
+}
+
+.dish {
+  min-width: 220px;
+  height: 160px;
+  background: #111;
+  border-radius: 12px;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border: 1px solid #222;
+  transition: transform 0.2s;
+}
+
+.dish:hover {
+  transform: scale(1.05);
+}
+
+.dishes p {
+  max-width: 600px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+/* ================= HOURS ================= */
+.hours {
+  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hours h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hours p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #111;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+
+/* ================= RESPONSIVENESS ================= */
+@media (max-width: 768px) {
+  .voor-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .dish {
+    min-width: 160px;
+    height: 120px;
+    font-size: 1.5rem;
+  }
+
+  .dishes p {
+    font-size: 0.9rem;
+  }
+}
+li {
+  list-style: none;
+  padding: 5px;
+}
+.contact-line a {
+  color: #8b30c4fd;
+  text-decoration: none;
+  animation: glow 3s ease-in-out infinite;
+}
+#kleinetekst {
+  font-size: 15px;
+  color: #b39416;
+  text-shadow: 0 0 4px rgba(255, 255, 200, 0.4);
+  margin-top: -40px;
+  margin-bottom: 50px;
+}

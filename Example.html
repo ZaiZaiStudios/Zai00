@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DAILY'STOP</title>
+  <link rel="icon" type="image/png" href="DailyStopIcon.ico" />
+  <link rel="stylesheet" href="styleRestaurant.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>DAILY'STOP</h1>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION WITH PARALLAX -->
+    <section class="voor achtergrond-section">
+      <div class="achtergrond-bg"></div>
+
+      <div class="voor-content">
+        <img src="DSlogo.png" alt="Daily'stop Logo" class="DSlogo" />
+        <p id="kleinetekst">Panini - Broodjes - Burgers - En meer!</p>
+        <h2>Snel bereid, Overheerlijk en Halal</h2>
+        <p>
+          <a href="#" id="openMenuPopup" style="color: #ffb000; text-decoration: underline; cursor: pointer;">Ontdek ons menu</a> — met zorg en authenticiteit bereid.
+        </p>
+      </div>
+    </section>
+
+    <!-- DISHES SECTION -->
+    <section class="dishes">
+      <h3>Onze maaltijden, <em>met qualiteit en authenticiteit bereid</em></h3>
+
+      <div class="dish-track" id="dishTrack">
+        <div class="dish">🍜</div>
+        <div class="dish">🥟</div>
+        <div class="dish">🍚</div>
+        <div class="dish">🥢</div>
+
+        <!-- duplicate for seamless infinite scroll -->
+        <div class="dish">🍜</div>
+        <div class="dish">🥟</div>
+        <div class="dish">🍚</div>
+        <div class="dish">🥢</div>
+      </div>
+
+      <p>
+        Een verfijnde fusie van Chinese traditie en halal perfectie,
+        ontworpen voor consistentie en kwaliteit.
+      </p>
+    </section>
+
+
+    <!-- MENUKAART CAROUSEL SECTION, MET SOFTWARE GEREGELD -->
+    <section class="menukaart-carousel-section">
+      <h3>Menukaart</h3>
+      <div class="menukaart-carousel">
+        <button id="carouselPrev" class="carousel-btn" aria-label="Vorige">&#8592;</button>
+        <img id="carouselImg" class="carousel-img" src="menukaart1.png" alt="Menukaart" tabindex="0" />
+        <button id="carouselNext" class="carousel-btn" aria-label="Volgende">&#8594;</button>
+      </div>
+      </div>
+    </section>
+
+    <!-- Openingstijden -->
+    <section class="hours">
+      <h3>Openingstijden</h3>
+      <ul>
+        <li>Maandag: 12:00 – 20:00</li>
+        <li>Dinsdag: 12:00 – 20:00</li>
+        <li>Woensdag: 12:00 – 20:00</li>
+        <li>Donderdag: 12:00 – 20:00</li>
+        <li>Vrijdag: 12:00 – 20:00</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT & RESTERENDE INFORMATIE -->
+    <section class="contact-section">
+      <h3>Contact & Info</h3>
+      <div class="contact-info-p hours-contact-text">
+        <div class="contact-line"><span class="icon"><img src="whatsapp.png" alt="WhatsApp" class="contact-icon white-icon" style="vertical-align:middle;" /></span> +32 4 729 53 75 8</div>
+        <div class="contact-line"><span class="icon"><img src="instagram.png" alt="Instagram" class="contact-icon white-icon" style="vertical-align:middle;" /></span><a href="https://www.instagram.com/Dailystop.be" target="_blank">Onze Instagram Pagina</a></div>
+        <div class="contact-line"><span class="icon"><img src="mail.png" alt="E-mail" class="contact-icon white-icon" style="vertical-align:middle;" /></span> Dailystop-be@outlook.com</div>
+        <div class="contact-line"><span class="icon" style="font-size:1.3em; vertical-align:middle;">📍</span> Burgermeester Philipslaan, 3680 Maaseik</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56314733.329260096!2d-8.104799700106735!3d27.534704170498102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0c9004abc292d%3A0x927950a4bec5bc9f!2sDaily%20Stop!5e0!3m2!1sen!2sbe!4v1768121590088!5m2!1sen!2sbe" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      © Educatief eigendom van Zever Ltd. Alle rechten voorbehouden.
+    </footer>
+
+  </main>
+
+  <!-- MENU POPUP PRULLEKE -->
+  <div id="menuPopup" class="menu-popup-overlay" style="display:none;">
+    <div class="menu-popup-content">
+      <button id="closeMenuPopup" class="menu-popup-close">×</button>
+      <h2>Ons menu</h2>
+      <div class="menu-images-column">
+        <img src="menukaart2.png" alt="Menukaart 1" class="menu-img" />
+        <img src="menukaart1.png" alt="Menukaart 2" class="menu-img" />
+        <img src="menukaart0.png" alt="Menukaart 2" class="menu-img" />
+        <img src="menukaart3.png" alt="Menukaart 2" class="menu-img" />
+        <!-- foto's voor menu popup ding -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- ZOOMED IMAGE OVERLAY, MET EXTRA SOFTWARE GEREGELD -->
+  <div id="zoomOverlay" style="display:none;position:fixed;z-index:200;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+    <img id="zoomImg" src="" alt="Zoomed menu" style="max-width:90vw;max-height:90vh;border-radius:16px;box-shadow:0 4px 32px #000;" />
+    <button id="closeZoomOverlay" style="position:absolute;top:24px;right:36px;font-size:2.5rem;background:none;border:none;color:#ffb000;cursor:pointer;z-index:2;">×</button>
+  </div>
+</body>
+</html>
